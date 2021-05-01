@@ -1,14 +1,21 @@
-import React from "react";
+import React ,{useState} from "react";
 
 
-let count =1;
-
-const IncNum = () => {
-  count++;
-  console.log("clicked");
-};
 
 const App = () => {
+  const state = useState();
+// console.log(state);
+
+const [count , setCount] = useState(0);
+
+
+// let count =1;
+
+const IncNum = () => {
+  setCount(count+1);
+  // count++;
+  // console.log("clicked " + count++);
+};
   return (
     <>
       <h1> {count} </h1>
